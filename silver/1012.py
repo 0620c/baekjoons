@@ -30,6 +30,7 @@ for i in range(C):
             if arr[x][y] == 1:
                 arr = dfs(arr,x,y)
                 count += 1
+    print(count)
     
                 
                     
