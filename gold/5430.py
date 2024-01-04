@@ -1,18 +1,5 @@
 T = int(input())
 
-def R(arr):
-    arr_reverse = []
-    arr_len = len(arr)
-    for i in range(arr_len):
-        arr_reverse.append(arr[arr_len-i-1])
-    return arr_reverse
-
-def D(arr):
-    arr_del = []
-    for i in range(1,len(arr)):
-        arr_del.append(arr[i])
-    return arr_del
-
 def trans_arr(arr):
     if arr == '[]':
         return []
@@ -33,14 +20,14 @@ for i in range(T):
     arr = trans_arr(arr)
     for fun in fun_arr:
         if fun == "R":
-            arr = R(arr)
+            arr.reverse()
         else:
             if len(arr) == 0:
                 print('error')
                 flag = 1
                 break
             else:
-                arr = D(arr)
+                arr.popleft()
     
     if flag == 0:
         print(arr)
